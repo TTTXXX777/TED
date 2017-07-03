@@ -1,0 +1,9 @@
+module ted {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:ted";
+    prefix "ted";
+
+    revision "2015-01-05" {
+        description "Initial revision of ted model";
+    }
+}
