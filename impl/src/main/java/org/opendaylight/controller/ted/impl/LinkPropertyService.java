@@ -8,11 +8,29 @@
 package org.opendaylight.controller.ted.impl;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.opendaylight.yang.gen.v1.urn.opendaylight.inventory.rev130819.NodeConnectorRef;
 
 public interface LinkPropertyService {
 
-	public java.lang.Integer getDeviceId1();
 
+
+    public Map<Short,Long> getLogicalTopo();
+    
+    //public Set<Map<Long,List<Long>>> getCoMPTopo();
+
+
+    public Map<Short,NodeConnectorRef> getNodeMapIngress();
+
+    public Set<Map<Short,List<Integer>>> getPhysicalTopo();
+     
+    public Map<Short,List<Integer>> getBBUResource();
+    
+    public Map<Short,Long> getSWResource();
+    
+    public Map<Short,List<Integer>> getRRUResource();
+    
 }

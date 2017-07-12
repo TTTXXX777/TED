@@ -24,6 +24,7 @@ public class TedProvider {
     private static final Logger LOG = LoggerFactory.getLogger(TedProvider.class);
 
     private final DataBroker dataBroker;
+    private TedHandler tedHandler;
 
     private final NotificationPublishService notificationPublishService;
     private final NotificationService notificationService;
@@ -45,9 +46,10 @@ public class TedProvider {
     public void init() {
         LOG.info("TedProvider Session Initiated");
         if (notificationService != null) {
-            //LOG.info("NotificationService is: " + notificationService.toString());
-            LinkProperty linkproperty = new LinkProperty();
-            registration = notificationService.registerNotificationListener(linkproperty);
+            LOG.info("NotificationService is: " + notificationService.toString());
+            //LinkProperty linkproperty = new LinkProperty();
+            tedHandler = new TedHandler();
+            registration = notificationService.registerNotificationListener(tedHandler);
         }
 
     }
