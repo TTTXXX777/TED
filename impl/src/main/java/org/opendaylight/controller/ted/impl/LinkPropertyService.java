@@ -29,7 +29,9 @@ public interface LinkPropertyService {
      
     public Map<Short,List<Integer>> getBBUResource();
     
-    public Map<Short,Long> getSWResource();
+    public Map<Short,Long> getNEResource();
+
+    public Map<Short,List<Integer>> getWSSResource();
     
     public Map<Short,List<Integer>> getRRUResource();
     
